@@ -103,7 +103,7 @@ function articleMaker(obj){
   article.classList.add('article');
   date.classList.add('date');
   button.classList.add('expandButton');
-  button.addEventListener('click', function(e){article.classList.toggle("article-open")})
+  button.addEventListener('click', function(e){article.classList.toggle("article-open")});
 
 
   
@@ -163,3 +163,27 @@ You want your component to return markup like the template below:
   //Make sure it is in the same format as the others. 
   //Refresh the page to see the new article.
 
+  data.push(
+    {
+      title: 'Lord Fluffy the Magnificent',
+      date: 'Jan 1st, 2019',
+      firstParagraph: `Godfather ipsum dolor sit amet. I don't like violence, Tom. I'm a businessman; 
+      blood is a big expense. Leave the gun. Take the cannoli. Vito, how do you like my little angel? 
+      Isn't she beautiful? Your enemies always get strong on what you leave behind. The hotel, the casino. 
+      The Corleone Family wants to buy you out.
+      `,
+  
+      secondParagraph: `Friends and money - oil and water. It's not personal. It's business. 
+      Is that why you slapped my brother around in public? Mr Corleone is Johnny Fontane's godfather. 
+      Now Italians regard that as a very close, a very sacred religious relationship. 
+      My father's name was Antonio Andolini... and this is for you. `,
+  
+      thirdParagraph: `I don't feel I have to wipe everybody out, Tom. Just my enemies. 
+      I am sorry. What happened to your father was business. I have much respect for your father. But your father, 
+      his thinking is old-fashioned. You must understand why I had to do that. Now let's work through where we go from here. 
+      What's the matter with you? Is this what you've become, a Hollywood finocchio who cries like a woman? 
+      "Oh, what do I do? What do I do?" What is that nonsense? Ridiculous! I see you took the name of the town. 
+      What was your father's name? I want your answer and the money by noon tomorrow. And one more thing. 
+      Don't you contact me again, ever. From now on, you deal with Turnbull.`
+    }
+  );
