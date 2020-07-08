@@ -101,9 +101,9 @@ function articleMaker(obj){
   let readButton = document.createElement('button')
 
   //style
-  article.classList.add('article');
-  date.classList.add('date');
-  button.classList.add('expandButton');
+  article.className = 'article';
+  date.className = 'date';
+  button.className = 'expandButton';
   button.addEventListener('click', ()=>{article.classList.toggle("article-open")});
   readButton.addEventListener('click', ()=>{article.remove()})
 
