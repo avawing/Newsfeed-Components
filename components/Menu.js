@@ -16,8 +16,6 @@ function menuMaker(arr){
 
   menu.className = 'menu';
 
-  
-
   arr.forEach(element => {
     let items = document.createElement('li')
     items.textContent = element;
