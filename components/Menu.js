@@ -6,15 +6,17 @@ let menuItems = [
   "What's New",
   'Tech Trends',
   'Music',
-  'Log Out'
+  'Log Out',
 ];
 
 function menuMaker(arr){
   let button = document.querySelector('.menu-button')
   let menu = document.createElement('div');
+  let listy = document.createElement('ul');
+
   menu.classList.add('menu');
 
-  let listy = document.createElement('ul');
+  
 
   arr.forEach(element => {
     let items = document.createElement('li')
@@ -25,7 +27,9 @@ function menuMaker(arr){
 
   menu.appendChild(listy)
   
-  button.addEventListener('click', function(e){menu.classList.toggle("menu--open")})
+  button.addEventListener('click', ()=>{
+    menu.classList.toggle("menu--open")
+  })
   
 
   return menu

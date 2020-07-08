@@ -97,13 +97,15 @@ function articleMaker(obj){
   let firstPara = document.createElement('p');
   let secondPara = document.createElement('p');
   let thirdPara = document.createElement('p');
-  let button = document.createElement('span');
+  let button = document.createElement('button');
+  let readButton = document.createElement('button')
 
   //style
   article.classList.add('article');
   date.classList.add('date');
   button.classList.add('expandButton');
-  button.addEventListener('click', function(e){article.classList.toggle("article-open")});
+  button.addEventListener('click', ()=>{article.classList.toggle("article-open")});
+  readButton.addEventListener('click', ()=>{article.remove()})
 
 
   
@@ -115,6 +117,7 @@ function articleMaker(obj){
   secondPara.textContent = obj.secondParagraph;
   thirdPara.textContent = obj.thirdParagraph;
   button.textContent = '+';
+  readButton.textContent = 'Read'
 
   //append
 
@@ -124,6 +127,7 @@ function articleMaker(obj){
   article.appendChild(secondPara)
   article.appendChild(thirdPara)
   article.appendChild(button)
+  article.appendChild(readButton)
 
   return article;
 
@@ -157,7 +161,7 @@ You want your component to return markup like the template below:
 
   let articles = document.querySelector('.articles')
 
-  data.forEach(function(item){articles.append(articleMaker(item))})
+
 
   //Step 5: Add a new article to the array. 
   //Make sure it is in the same format as the others. 
@@ -187,3 +191,5 @@ You want your component to return markup like the template below:
       Don't you contact me again, ever. From now on, you deal with Turnbull.`
     }
   );
+
+  data.forEach(function(item){articles.append(articleMaker(item))})
