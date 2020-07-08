@@ -14,7 +14,7 @@ function menuMaker(arr){
   let menu = document.createElement('div');
   let listy = document.createElement('ul');
 
-  menu.classList.className = 'menu';
+  menu.className = 'menu';
 
   
 
